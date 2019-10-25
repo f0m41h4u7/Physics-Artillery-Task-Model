@@ -34,6 +34,7 @@ for(alpha in seq(from=0.02, to=1.2, by=(epsilon*1.2))) #change angles from 15 gr
                 	       	y_axes[cnt] <- (v0*sin(alpha)*t-g*t*t/2)
                        		cnt <- cnt+1
 	               	}
+			print(paste("v0 = ", v0, "m/s, alpha = ", alpha))
         	       	lines(x_axes, y_axes, type="o",  pch=20, lty=1, col="blue")
        		}
 	}
