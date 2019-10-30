@@ -13,8 +13,6 @@ x <- vector(length=50) #horizontal axes
 y <- vector(length=50) #vertical axes
 
 plot(x, y, col="blue", ylim=c(0, 13), xlim=c(0, 13))
-#currentParameters = paste("v0=", v0, "m/s, angle=", alpha, "radians, m=", m, "kg, k=", k)
-#title(main="", col.main="red", font.main=4)
 legend(1, 13, c(paste("v0 = ", v0, " m/s"), "angle = pi/4", paste("m = ", m, " kg"), paste("k = ", k)), cex=0.8)
 
 v_x <- vector(length=50) #projections on x
