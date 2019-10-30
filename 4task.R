@@ -31,23 +31,23 @@ y[1] <- 0
 
 for(cnt in seq(2, 51, 1))
 {
-	#f_v1_x <- (-k * v_x[cnt-1] * v_x[cnt-1] * dt / m) 
-	#f_v1_y <- (-(g + k * v_y[cnt-1] * v_y[cnt-1] / m) * dt)
+	f_v1_x <- (-k * v_x[cnt-1] * v_x[cnt-1] * dt / m) 
+	f_v1_y <- (-(g + k * v_y[cnt-1] * v_y[cnt-1] / m) * dt)
 
-	#v_x_tmp <- (v_x[cnt-1] + h * f_v1_x)
-	#v_y_tmp <- (v_y[cnt-1] + h * f_v1_y)
+	v_x_tmp <- (v_x[cnt-1] + h * f_v1_x)
+	v_y_tmp <- (v_y[cnt-1] + h * f_v1_y)
 
-	#f_x_tmp <- (-k * v_x_tmp * v_x_tmp * dt / m)
-        #f_y_tmp <- (-(g + k * v_y_tmp * v_y_tmp / m) * dt)
+	f_x_tmp <- (-k * v_x_tmp * v_x_tmp * dt / m)
+        f_y_tmp <- (-(g + k * v_y_tmp * v_y_tmp / m) * dt)
 
-	#v_x[cnt] <- (v_x[cnt-1] + h * (f_v1_x + f_x_tmp) / 2)
-	#v_y[cnt] <- (v_y[cnt-1] + h * (f_v1_y + f_y_tmp) / 2)
-	
-	v_x[cnt] <- (v_x[cnt-1] - k * v_x[cnt-1] * v_x[cnt-1] * dt / m)
-	v_y[cnt] <- (v_y[cnt-1] - (g + k * v_y[cnt-1] * v_y[cnt-1] / m) * dt)
+	v_x[cnt] <- (v_x[cnt-1] + h * (f_v1_x + f_x_tmp) / 2)
+	v_y[cnt] <- (v_y[cnt-1] + h * (f_v1_y + f_y_tmp) / 2)
 
 	x[cnt] <- (x[cnt-1] + v_x[cnt-1]*dt)
 	y[cnt] <- (y[cnt-1] + v_y[cnt-1]*dt)
 }
 
 lines(x, y, type="o",  pch=20, lty=1, col="blue")
+
+#v_x[cnt] <- (v_x[cnt-1] - k * v_x[cnt-1] * v_x[cnt-1] * dt / m)
+#v_y[cnt] <- (v_y[cnt-1] - (g + k * v_y[cnt-1] * v_y[cnt-1] / m) * dt)
