@@ -1,11 +1,21 @@
 # Physics-Artillery-Task-Model
 
-`1task.R` - рассчитывает зону поражения в зависимости от начальной скорости и направления.
+`1task.R` - depends on direction and initial velocity.
 
-`2task.R` - для данных координаат х и у рассчитывает возможные траектории движения и необходимые значения начальной скорости и угла (значения выводятся с помощью стандартного вывода).
+![alt text](https://raw.githubusercontent.com/InviewComp/Owl/master/1graph.png)
 
-`3-1task.R` - исследует зону поражения в зависимости от начальной скорости и угла в 3х-мерном пространстве.
+`2task.R` - trajectories which consist the x,y point.
 
-`3-2task.R` - то же самое, что и 3-1, только рассматривается одно направление (2х-мерное пространство).
+![alt text](https://raw.githubusercontent.com/InviewComp/Owl/master/2graph.png)
 
-`4task.R` - то же самое, только с учетом сопротивления среды.
+`3-1task.R` - depends on angle and initial velocity in 3D space.
+
+![alt text](https://raw.githubusercontent.com/InviewComp/Owl/master/3-1graph.png)
+
+`3-2task.R` - same, in 2D (only one direction).
+
+![alt text](https://raw.githubusercontent.com/InviewComp/Owl/master/3-2graph.png)
+
+`4task.R` - same, but with enviroment resistance.
+
+![alt text](https://raw.githubusercontent.com/InviewComp/Owl/master/4graph.png)
